@@ -1,19 +1,10 @@
-from flask import Flask, render_template_string
+from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def home():
-    return render_template_string("""
-        <html>
-        <head><title>KEVINPROGRAM.COM</title></head>
-        <body style="text-align:center; font-family:sans-serif;">
-            <h1>Selamat Datang di KEVINPROGRAM.COM 🐵</h1>
-            <p>Website percobaan Python Flask milik Kevin!</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Monkey_face.svg" width="200">
-        </body>
-        </html>
-    """)
+    return "<h1>Halo Kevin! Situsmu berhasil online 🚀</h1>"
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
